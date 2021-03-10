@@ -11,14 +11,14 @@ app.get('/api/notes', (req, res) => {
 
 }
 
-app.post('/api/notes', (req, res) => {
-    const newNote = req.body;
-    console.log(newNote);
-    try {
-        fs.readFile('./db/db.json', 'utf8', function (err, data) {
-            if (err) {
-                throw err;
-            }
-        })
-    }
-}
+// app.post('/api/notes', (req, res) => {
+//     const newNote = req.body;
+//     console.log(newNote);
+//     try {
+//         fs.readFile('./db/db.json', 'utf8', function (err, data) {
+//             if (err) {
+//                 throw err;
+//             }
+//         })
+//     }
+// }
