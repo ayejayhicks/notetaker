@@ -1,6 +1,7 @@
+const fs = require('fs');
 const path = require('path')
 
-module.exports =(app)=> {
+module.exports =(app) => {
 
 //Test, walk through
 
@@ -8,7 +9,28 @@ module.exports =(app)=> {
         res.send('<h1>Hi Alaina!!</h1>')
     })
 
-    app.get('/', (req,res) => {
-       res.sendFile(path.join(__dirname, '../public/index.html' ))
+
+
+
+    app.get('/notes', (req, res) => {
+        res.sendFile(path.join(__dirname, '../public/notes.html'));
+    });
+
+    app.get('/api/notes',(req, res) => {
+        fs.readFile('./db/db.json', 'utf8', function(err, data){
+            res.send(data)
+        })
     })
-}
+
+    app.post('/api/notes', (req, res) => {
+        fs.readFile('./db/db.json', 'utf8', function(err, data) {
+        res.send("test")
+        console.log(req.body);
+
+        })
+    })
+
+    app.get('/', (req, res) => {
+       res.sendFile(path.join(__dirname, '../public/index.html'));
+    });
+};
