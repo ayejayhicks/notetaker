@@ -20,7 +20,8 @@ Express.js
 [Heroku] (https://tranquil-island-78590.herokuapp.com/)
 
 ### Screenshots  
-(https://user-images.githubusercontent.com/73868232/110415769-199b0800-8058-11eb-8297-8dbf1aab592e.png)
+(https://user-images.githubusercontent.com/73868232/110415769-199b0800-8058-11eb-8297-8dbf1aab592e.png)  
+(https://user-images.githubusercontent.com/73868232/110970750-ae835700-831f-11eb-985d-3eebd68766f7.png)
 
 ### Contributers
 Alaina Hicks - https://github.com/ayejayhicks
