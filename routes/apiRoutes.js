@@ -70,7 +70,8 @@ module.exports = (app) => {
             data.push(req.body);
 
             //write to the "db"
-            const result = await writeFileAsync('./db/db.json');
+            const result = await writeFileAsync('./db/db.json', data);
+
             console.log(result);
 
             console.log(data);
