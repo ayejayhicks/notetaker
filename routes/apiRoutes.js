@@ -70,7 +70,7 @@ module.exports = (app) => {
             data.push(req.body);
 
             //write to the "db"
-            const result = await writeFileAsync('./db/db.json', data);
+            const result = await writeFileAsync('./db/db.json', JSON.stringify(data));
 
             console.log(result);
 
@@ -81,6 +81,7 @@ module.exports = (app) => {
             console.log("we hit the catch!");
             //if there was an error thrown, we handle it here
             res.status(500).send(err);
+            console.log(err)
         }
     });
 }
